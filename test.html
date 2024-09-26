@@ -1,0 +1,11 @@
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar').innerHTML = data;
+            })
+            .catch(error => console.error('Erreur de chargement de la navbar:', error));
+    });
+</script>
+<div id="navbar"></div>

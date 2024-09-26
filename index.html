@@ -17,32 +17,17 @@
 </head>
 <body>
   
-  <nav class="navbar navbar-expand-lg mt-3 text-white">
-    <div class="container-fluid">
-      <button class="navbar-toggler toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
-        <img src="/images/icons/menu.png" alt="menu">
-      </button>
-      <div class="collapse navbar-collapse justify-content-center" id="navbars">
-        <ul class="navbar-nav d-flex align-items-center text-center">
-          <li class="nav-item parallelogram_left">
-            <a class="nav-link section" aria-current="page" href="/old_editions/">Anciens</a>
-          </li>
-          <li class="nav-item parallelogram_left ms-3">
-            <a class="nav-link section" aria-current="page" href="/organisation/">Organisation</a>
-          </li>
-          <li class="nav-item ps-5 pe-5">
-            <a class="nav-link title orange-shadow" aria-current="page" href="/">Flag'Malo</a>
-          </li>
-          <li class="nav-item parallelogram_right">
-            <a class="nav-link section" aria-current="page" href="https://accounts.flagmalo.fr/onboard/">Inscriptions</a>
-          </li>
-          <li class="nav-item parallelogram_right ms-3">
-            <a class="nav-link section" aria-current="page" href="/about/">À Propos</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            fetch('navbar.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('navbar').innerHTML = data;
+                })
+                .catch(error => console.error('Erreur de chargement de la navbar:', error));
+        });
+    </script>
+    <div id="navbar"></div>
     <div class="container text-white text-center">
     <hr>
     <h1 class="fontFord"> Rejoins-nous le <p class="text-decoration-underline"> 9 décembre </p> pour la nouvelle édition du</h1>
