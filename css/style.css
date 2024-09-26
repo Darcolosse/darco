@@ -24,14 +24,14 @@ body {
 
 @font-face {
     font-family: 'Doctor';
-    src: url('../font/Doctor\ Glitch.otf') format('opentype');
+    src: url('../fonts/Doctor\ Glitch.otf') format('opentype');
 }
 @font-face {
     font-family: 'Ford';
-    src: url('../font/Ford\ Antenna\ Medium.otf') format('opentype');
+    src: url('../fonts/Ford\ Antenna\ Medium.otf') format('opentype');
 }
 
-.fontFord{
+.fontsFord{
     font-family: 'Ford', sans-serif;
 }
 .fontDoctor{
