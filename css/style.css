@@ -23,10 +23,6 @@ body {
 }
 
 @font-face {
-    font-family: 'Doctor';
-    src: url('../fonts/Doctor\ Glitch.otf') format('opentype');
-}
-@font-face {
     font-family: 'Ford';
     src: url('../fonts/Ford\ Antenna\ Medium.otf') format('opentype');
 }
@@ -34,8 +30,8 @@ body {
 .fontsFord{
     font-family: 'Ford', sans-serif;
 }
-.fontDoctor{
-    font-family: 'Doctor', sans-serif;
+.fontFord{
+    font-family: 'Ford', sans-serif;
 }
 
 .white-shadow{
@@ -67,13 +63,13 @@ body {
 }
 
 .title {
-    font-family: 'Doctor', sans-serif;
-    letter-spacing: 0.25rem;
-    font-size: 5rem;
+    font-family: 'Ford', sans-serif;
+    letter-spacing: 0.2rem;
+    font-size: 1rem;
     color: var(--white);
 
     @media screen and (max-width: 1920px) {
-        font-size: 5rem;
+        font-size: 2rem;
     }
 
     @media screen and (max-width: 992px) {
@@ -90,28 +86,28 @@ body {
 }
 
 .title-2{
-    font-family: 'Doctor', sans-serif;
+    font-family: 'Ford', sans-serif;
     letter-spacing: 0.25rem;
     font-size: 2.5rem;
     color: var(--white);
 }
 
 .title-3{
-    font-family: 'Doctor', sans-serif;
+    font-family: 'Ford', sans-serif;
     letter-spacing: 0.25rem;
     font-size: 1.25rem;
     color: var(--white);
 }
 
 .titleShadow{
-    font-family: 'Doctor', sans-serif;
+    font-family: 'Ford', sans-serif;
     letter-spacing: 0.25rem;
     font-size: 5rem;
     color: var(--white);
 }
 
 .subtitle{
-    font-family: 'Doctor', sans-serif;
+    font-family: 'Ford', sans-serif;
     letter-spacing: 0.25rem;
     font-size: 1rem;
     color: var(--white);
@@ -119,7 +115,7 @@ body {
 
 .section{
     font-family: 'Ford', sans-serif;
-    letter-spacing: 0.25rem;
+    letter-spacing: 0rem;
     font-size: 1rem;
     color: var(--white);
     text-shadow: 2px 2px var(--orange-shadow);
