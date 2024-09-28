@@ -1,3 +1,14 @@
+function header(){
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            })
+            .catch(error => console.error('Erreur de chargement du header:', error));
+    });
+}
+
 function navbar(){
     document.addEventListener('DOMContentLoaded', function () {
         fetch('navbar.html')
@@ -20,17 +31,5 @@ function footer(){
     });
 }
 
-function header(){
-    document.addEventListener('DOMContentLoaded', function () {
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            })
-            .catch(error => console.error('Erreur de chargement du header:', error));
-    });
-}
-
 navbar();
 footer();
-header();
