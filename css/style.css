@@ -8,8 +8,8 @@
     --blue-shadow:  rgba(0, 200, 255, 0.8);
     --purple-shadow:  rgba(128, 0, 128, 0.800);
     --dark-shadow:  rgba(0, 0, 0, 1);
-    --flagmalo: #ce5d0d;
-    --flagmalo-shadow: #d76913;
+    --darco: #ce5d0d;
+    --darco-shadow: #d76913;
 
 }
 
@@ -19,7 +19,7 @@ body {
     padding: 0;
     /*overflow: hidden;*/
     overflow-x: hidden;
-
+    color: var(--white);
 }
 
 @font-face {
@@ -33,7 +33,6 @@ body {
 .fontFord{
     font-family: 'Ford', sans-serif;
 }
-
 .white-shadow{
     text-shadow: 5px 5px var(--white-shadow);
 }
@@ -58,26 +57,25 @@ body {
 
 .hr{ 
     color: var(--white); 
-
     text-align: center;
 }
 
 .title {
     font-family: 'Ford', sans-serif;
     letter-spacing: 0.2rem;
-    font-size: 1rem;
+    font-size: 4rem;
     color: var(--white);
 
     @media screen and (max-width: 1920px) {
-        font-size: 2rem;
+        font-size: 4rem;
     }
 
     @media screen and (max-width: 992px) {
-        font-size: 3.8rem;
+        font-size: 3.5rem;
     }
 
     @media screen and (max-width: 768px) {
-        font-size: 2.8rem;
+        font-size: 2.5rem;
     }
 
     @media screen and (max-width: 576px) {
@@ -176,17 +174,17 @@ body {
 
 .btn-outline-warning{
     background-color: transparent;
-    color: var(--flagmalo);
-    border-color: var(--flagmalo);
+    color: var(--darco);
+    border-color: var(--darco);
 }
 .btn-outline-warning:hover{
-    background-color: var(--flagmalo);
+    background-color: var(--darco);
     color: var(--background);
-    border-color: var(--flagmalo);
+    border-color: var(--darco);
 }
 
 .toggler{
-    color: var(--flagmalo);
+    color: var(--darco);
 }
 
 .parallelogram_left {
