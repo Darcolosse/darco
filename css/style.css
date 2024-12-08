@@ -13,6 +13,11 @@
 
 }
 
+
+.container {
+    backdrop-filter: blur(5px);
+}
+
 body {
     background-color: var(--background);
     margin: 0;
