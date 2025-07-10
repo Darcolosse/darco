@@ -1,14 +1,3 @@
-function header(){
-    document.addEventListener('DOMContentLoaded', function () {
-        fetch('header.html')
-            .then(response => response.text())
-            .then(data => {
-                document.getElementById('header').innerHTML = data;
-            })
-            .catch(error => console.error('Erreur de chargement du header:', error));
-    });
-}
-
 function navbar(){
     document.addEventListener('DOMContentLoaded', function () {
         fetch('navbar.html')
@@ -29,7 +18,20 @@ function footer(){
             })
             .catch(error => console.error('Erreur de chargement du footer:', error));
     });
+    document.addEventListener('DOMContentLoaded', function () {
+    var observer = new MutationObserver(function () {
+        var yearElem = document.getElementById('year');
+        if (yearElem) {
+            var currentYear = new Date().getFullYear();
+            yearElem.innerHTML = currentYear;
+            observer.disconnect();
+        }
+    });
+    observer.observe(document.body, { childList: true, subtree: true });
+});
 }
-
 navbar();
 footer();
+
+
+
