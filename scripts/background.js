@@ -6,7 +6,7 @@ function createStar(size) {
     const point = document.createElement('div');
     point.style.width = size + 'px';
     point.style.height = size + 'px';
-    point.style.backgroundColor = 'white';
+    point.style.backgroundColor = 'red';
     point.style.borderRadius = '50%';
     point.style.position = 'fixed';
     point.style.opacity = 1;
@@ -75,6 +75,7 @@ function background(totalStars, animation) {
         elements.push({ point, cross });
     }
 
+    console.log(`Created ${totalStars} stars with animation: ${animation}`);
     window.addEventListener('resize', () => {
         elements.forEach(({ point, cross }) => {
             point.style.top = Math.floor(getRandomNumber(0, window.innerHeight)) + 'px';

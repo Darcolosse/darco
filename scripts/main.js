@@ -1,3 +1,14 @@
+function header(){
+    document.addEventListener('DOMContentLoaded', function () {
+        fetch('head.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('head').innerHTML = data;
+            })
+            .catch(error => console.error('Erreur de chargement du header :', error));
+    });
+}
+
 function navbar(){
     document.addEventListener('DOMContentLoaded', function () {
         fetch('navbar.html')
@@ -30,6 +41,7 @@ function footer(){
     observer.observe(document.body, { childList: true, subtree: true });
 });
 }
+header();
 navbar();
 footer();
 
