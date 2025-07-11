@@ -6,85 +6,84 @@ function createStar(size) {
     const point = document.createElement('div');
     point.style.width = size + 'px';
     point.style.height = size + 'px';
-    point.style.backgroundColor = 'red';
+    point.style.backgroundColor = 'rgba(255, 255, 255, 1)';
     point.style.borderRadius = '50%';
     point.style.position = 'fixed';
-    point.style.opacity = 1;
     point.style.zIndex = -1;
-    point.style.top = Math.floor(getRandomNumber(0, window.innerHeight)) + 'px';
+    point.style.top = Math.floor(getRandomNumber(0, window.innerHeight - size)) + 'px';
     point.style.left = Math.floor(getRandomNumber(0, window.innerWidth - size)) + 'px';
-    point.classList.add("point");
+    point.style.boxShadow = `0 0 10px 3px rgba(255, 255, 255, 0.5)`;
     return point;
 }
 
 function createCross(size) {
     const cross = document.createElement('div');
-    cross.style.position = 'fixed';
-    cross.style.top = Math.floor(getRandomNumber(0, window.innerHeight)) + 'px';
-    cross.style.left = Math.floor(getRandomNumber(0, window.innerWidth - size)) + 'px';
-    cross.style.transform = 'translate(-50%, -50%)';
-    cross.style.width = size + 'px';
-    cross.style.height = size + 'px';
-    cross.style.backgroundColor = 'transparent';
-    cross.style.zIndex = -1;
+    Object.assign(cross.style, {
+        position: 'fixed',
+        top: `${Math.floor(getRandomNumber(0, window.innerHeight))}px`,
+        left: `${Math.floor(getRandomNumber(0, window.innerWidth - size))}px`,
+        width: `${size}px`,
+        height: `${size}px`,
+        zIndex: -1
+    });
 
-    const horizontalLine = document.createElement('div');
-    horizontalLine.style.position = 'absolute';
-    horizontalLine.style.top = '50%';
-    horizontalLine.style.left = '0';
-    horizontalLine.style.width = '100%';
-    horizontalLine.style.height = '2px';
-    horizontalLine.style.backgroundColor = 'white';
-    horizontalLine.style.borderRadius = '100%';
-    horizontalLine.style.transform = 'translateY(-50%)';
-    cross.appendChild(horizontalLine);
+    const blurRadius =  15 * size/10;
+    const spreadRadius = 3 * size/10;
+    const thickness = 0.2 * size;
 
-    const verticalLine = document.createElement('div');
-    verticalLine.style.position = 'absolute';
-    verticalLine.style.top = '0';
-    verticalLine.style.left = '50%';
-    verticalLine.style.width = '2px';
-    verticalLine.style.height = '100%';
-    verticalLine.style.backgroundColor = 'white';
-    verticalLine.style.borderRadius = '100%';
-    verticalLine.style.transform = 'translateX(-50%)';
-    cross.appendChild(verticalLine);
+    const horizontal = document.createElement('div');
+    Object.assign(horizontal.style, {
+        position: 'absolute',
+        width: '100%',
+        top: `${(size/2)}px`,
+        height: `${thickness}px`,
+        background: 'white',
+        borderRadius: '100%',
+        boxShadow: `0 0 ${blurRadius}px ${spreadRadius}px rgba(255,255,255,0.6)`,
+        transform: 'translate(-50%, -50%)'
+    });
 
+    const vertical = document.createElement('div');
+    Object.assign(vertical.style, {
+        position: 'absolute',
+        width: `${thickness}px`,
+        left: `${-thickness/2}px`,
+        height: '100%',
+        background: 'white',
+        borderRadius: '100%',
+        boxShadow: `0 0 ${blurRadius}px ${spreadRadius}px rgba(255,255,255,0.6)`,
+    });
+
+    cross.append(horizontal, vertical);
     return cross;
 }
 
 function background(totalStars, animation) {
-    const list = ["shooting-star-left", "shooting-star-left-up", "shooting-star-left-down",
-                  "shooting-star-right", "shooting-star-right-up", "shooting-star-right-down"];
-
-    const elements = [];
+    const animationList = [
+        "shooting-star-left",
+        "shooting-star-left-up",
+        "shooting-star-left-down",
+        "shooting-star-right",
+        "shooting-star-right-up",
+        "shooting-star-right-down"
+    ];
 
     for (let i = 0; i < totalStars; i++) {
-        const size = getRandomNumber(2, 10);
+        const size = Math.floor(getRandomNumber(2, 10));
         const point = createStar(size);
         const cross = createCross(size);
 
         if (animation) {
-            const nameAnimation = list[Math.floor(getRandomNumber(0, 6))];
-            const animationDuration = getRandomNumber(1, 8);
-            point.style.animation = `${nameAnimation} ${animationDuration}s linear infinite`;
+            const randomAnimation = animationList[Math.floor(getRandomNumber(0, animationList.length))];
+            const animationDuration = getRandomNumber(1, 6);
+            point.style.animation = `${randomAnimation} ${animationDuration}s linear infinite`;
         }
 
         document.body.appendChild(point);
         document.body.appendChild(cross);
-        elements.push({ point, cross });
     }
-
-    console.log(`Created ${totalStars} stars with animation: ${animation}`);
-    window.addEventListener('resize', () => {
-        elements.forEach(({ point, cross }) => {
-            point.style.top = Math.floor(getRandomNumber(0, window.innerHeight)) + 'px';
-            point.style.left = Math.floor(getRandomNumber(0, window.innerWidth - parseInt(point.style.width))) + 'px';
-            cross.style.top = Math.floor(getRandomNumber(0, window.innerHeight)) + 'px';
-            cross.style.left = Math.floor(getRandomNumber(0, window.innerWidth - parseInt(cross.style.width))) + 'px';
-        });
-    });
 }
 
-background(60);
+// Exemple d'appel
+background(20);
 background(15, true);
