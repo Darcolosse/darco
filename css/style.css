@@ -29,12 +29,12 @@ body {
 
 @font-face {
     font-family: 'Ford';
-    src: url('../assets/fonts/Ford\ Antenna\ Medium.otf') format('opentype');
+    src: url('../assets/fonts/ford-antenna-medium.otf') format('opentype');
 }
 
 @font-face {
     font-family: 'DoctorGlitch';
-    src: url('../assets/fonts/Doctor\ Glitch.otf') format('opentype');
+    src: url('../assets/fonts/Doctor-Glitch.otf') format('opentype');
 }
 
 @font-face {
