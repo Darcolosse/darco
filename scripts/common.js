@@ -1,4 +1,4 @@
-function header(root = './common/') {
+function navbar(root = './common/') {
     let head = document.getElementById('head');
     while(head.firstChild) {head.removeChild(head.firstChild);}
 
@@ -37,5 +37,5 @@ function footer(root = './common/') {
     });
 }
 
-header();
+navbar();
 footer();

@@ -29,15 +29,33 @@ body {
 
 @font-face {
     font-family: 'Ford';
-    src: url('../fonts/Ford\ Antenna\ Medium.otf') format('opentype');
+    src: url('../assets/fonts/Ford\ Antenna\ Medium.otf') format('opentype');
 }
 
-.fontsFord{
-    font-family: 'Ford', sans-serif;
+@font-face {
+    font-family: 'DoctorGlitch';
+    src: url('../assets/fonts/Doctor\ Glitch.otf') format('opentype');
 }
+
+@font-face {
+    font-family: 'RobotoMono-Bold';
+    src: url('../assets/fonts/RobotoMono-Medium.ttf') format('truetype');
+}
+
+
+
 .fontFord{
     font-family: 'Ford', sans-serif;
 }
+
+.fontDoctorGlitch{
+    font-family: 'DoctorGlitch', sans-serif;
+}
+
+.fontRobotoMono{
+    font-family: 'RobotoMono-Bold', monospace;
+}
+
 .white-shadow{
     text-shadow: 5px 5px var(--white-shadow);
 }
@@ -63,6 +81,11 @@ body {
 .hr{ 
     color: var(--white); 
     text-align: center;
+}
+
+p {
+    font-family: 'RobotoMono-Bold', monospace;
+    text-align: justify;
 }
 
 .title {
@@ -99,6 +122,13 @@ body {
     font-family: 'Ford', sans-serif;
     letter-spacing: 0.25rem;
     font-size: 1.25rem;
+    color: var(--white);
+}
+
+.title-4{
+    font-family: 'Ford', sans-serif;
+    letter-spacing: 0.25rem;
+    font-size: 1.0rem;
     color: var(--white);
 }
 
