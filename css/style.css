@@ -207,16 +207,6 @@ p {
     color: var(--white);
 }
 
-.btn-outline-warning{
-    background-color: transparent;
-    color: var(--darco);
-    border-color: var(--darco);
-}
-.btn-outline-warning:hover{
-    background-color: var(--darco);
-    color: var(--background);
-    border-color: var(--darco);
-}
 
 .toggler{
     color: var(--darco);
@@ -291,7 +281,44 @@ p {
 	border: 1px solid rgba(255, 252, 252, 0.125);
 	border-radius: .25rem;
 }
+.btn {
+    font-family: 'RobotoMono-Medium', monospace;
+    color: var(--orange-shadow);
+    background-color: transparent;
+    border: var(--orange-shadow) 2px solid;
+    font-weight: bold;
+}
 
+.btn:hover {
+    font-family: 'RobotoMono-Medium', monospace;
+    color: var(--white);
+    background-color: var(--orange-shadow);
+    font-weight: bold;
+}
+
+.badge {
+    font-family: 'RobotoMono-Medium', monospace;
+	padding: .55em .85em;
+	font-size: 1em;
+	color: var(--white);
+}
+
+.tech-badge {
+    display: inline-flex;
+    align-items: center;
+    font-family: 'RobotoMono-Medium', monospace;
+	padding: .55em .85em;
+	font-size: 1em;
+	color: var(--white);
+    margin: 0.5rem;
+    border-radius: 0.25em;
+    width: auto;
+    gap: 0.5em;
+}
+
+.tech-badge img {
+    max-height: 28px;
+}
 
 @keyframes Animation_left {
     0% {
