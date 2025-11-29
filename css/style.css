@@ -78,6 +78,10 @@ body {
     text-shadow: 5px 5px var(--dark-shadow);
 }
 
+.no-shadow {
+    text-shadow: none;
+}
+
 .hr{ 
     color: var(--white); 
     text-align: center;
@@ -193,9 +197,28 @@ p {
     }
 }
 
+.icon-img-height {
+    height: 6rem;
+    width: auto; 
+    object-fit: contain;
+}
+
 .img-fluid{
     width: auto;
 }
+.h-10 {
+    height: 10% !important;
+}
+.h-20 {
+    height: 20% !important;
+}
+.h-30 {
+    height: 30% !important;
+}
+.h-40 {
+    height: 40% !important;
+}
+
 
 .nav-link{
     color: white;
@@ -318,6 +341,17 @@ p {
 
 .tech-badge img {
     max-height: 28px;
+}
+
+.carousel-caption {
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgba(128, 128, 128, 0.3);
+}
+
+.carousel-inner {
+    border-radius: 10px;
 }
 
 @keyframes Animation_left {
