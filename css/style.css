@@ -207,16 +207,51 @@ p {
     width: auto;
 }
 .h-10 {
-    height: 10% !important;
+    height: 10% ;
 }
 .h-20 {
-    height: 20% !important;
+    height: 20% ;
 }
 .h-30 {
-    height: 30% !important;
+    height: 30% ;
 }
 .h-40 {
-    height: 40% !important;
+    height: 40% ;
+}
+
+.mh-1 {
+    max-height: 1rem ;
+}
+.mh-2 {
+    max-height: 2rem ;
+}
+.mh-3 {
+    max-height: 3rem ;
+}
+.mh-4 {
+    max-height: 4rem ;
+}
+.mh-5 {
+    max-height: 5rem ;
+}
+
+.fh-1{
+    height: 1rem ;
+}
+.fh-2{
+    height: 2rem ;
+}
+.fh-3{
+    height: 3rem ;
+}
+.fh-4{
+    height: 4rem ;
+}
+.fh-5{
+    height: 5rem ;
+}
+.fh-10{
+    height: 10rem ;
 }
 
 
